@@ -15,10 +15,4 @@ if ( !defined( 'ABSPATH' ) ) {
   exit;
 }
 
-// Start the menu syncing only after init; make it a really low priority
-// to make sure the menu is actually created.
-function menu_sync_init() {
-  require_once( 'inc/menu-sync.php' );
-}
-
-add_action( 'init', 'menu_sync_init', 99 );
+require_once( 'inc/menu-sync.php' );
